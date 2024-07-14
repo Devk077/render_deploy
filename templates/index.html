@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+{% load static %}
+<html data-wf-page="66677776223304c87fbb1748" data-wf-site="66677776223304c87fbb16f4">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Healvibe</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script
+        type="text/javascript">WebFont.load({ google: { families: ["Ubuntu:300,300italic,400,400italic,500,500italic,700,700italic", "Merriweather:300,300italic,400,400italic,700,700italic,900,900italic", "Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic", "Bungee Outline:regular"] } });</script>
+    <script
+        type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'images/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'images/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'images/safari-pinned-tab.svg' %}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+    <style>
+        @font-face {
+            font-family: 'Publicsans';
+            src: url('{% static "images/66677776223304c87fbb1758_publicsans-italic.woff2" %}') format('woff2');
+            font-weight: 400;
+            font-style: italic;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Publicsans';
+            src: url('{% static "images/66677776223304c87fbb1756_publicsans-regular.woff2" %}') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Publicsans';
+            src: url('{% static "images/66677776223304c87fbb175a_publicsans-medium.woff2" %}') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Publicsans';
+            src: url('{% static "images/66677776223304c87fbb1759_publicsans-mediumitalic.woff2" %}') format('woff2');
+            font-weight: 500;
+            font-style: italic;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Publicsans';
+            src: url('{% static "images/66677776223304c87fbb1754_publicsans-semibold.woff2" %}') format('woff2');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Publicsans';
+            src: url('{% static "images/66677776223304c87fbb1755_publicsans-semibolditalic.woff2" %}') format('woff2');
+            font-weight: 600;
+            font-style: italic;
+            font-display: swap;
+        }
+
+        .slide-2 {
+            background-image: url("{% static 'images/t4.jpg' %}");
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+
+        .slide-3 {
+            background-image: url("{% static 'images/t1.jpg' %}");
+            background-position: 50%;
+            background-size: auto;
+        }
+
+        .slide-4 {
+            background-image: url("{% static 'images/t5.jpg' %}");
+            background-position: 0 0;
+            background-size: auto;
+        }
+
+        .slide-5 {
+            background-image: url("{% static 'images/t3.jpg' %}");
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+
+        .slide-6 {
+            background-image: url("{% static 'images/t2.jpg' %}");
+            background-position: 60%;
+            background-repeat: no-repeat;
+            background-size: auto;
+        }
+
+        .didi-wrapper {
+            object-fit: cover;
+            background-image: url("{% static 'images/didi-20photo-min.jpg' %}");
+            background-position: 50% 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: scroll;
+            border-radius: 1000px;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            height: 80%;
+            margin-top: 17px;
+            display: block;
+        }
+
+        .mission-wrapper {
+            opacity: 1;
+            background-image: url("{% static 'images/bg.png' %}"),
+            radial-gradient(circle, rgba(255, 255, 255, 0) 49%, rgba(113, 178, 124, .35));
+            background-position: 0%, 0 0;
+            background-repeat: repeat, repeat;
+            background-size: cover, auto;
+            background-attachment: scroll, scroll;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+
+        /* .w-lightbox-left {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0yMCAwIDI0IDQwIiB3aWR0aD0iMjQiIGhlaWdodD0iNDAiPjxnIHRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PHBhdGggZD0ibTAgMGg1djIzaDIzdjVoLTI4eiIgb3BhY2l0eT0iLjQiLz48cGF0aCBkPSJtMSAxaDN2MjNoMjN2M2gtMjZ6IiBmaWxsPSIjZmZmIi8+PC9nPjwvc3ZnPg==");
+            display: none;
+            bottom: 0;
+            left: 0;
+        }
+
+        .w-lightbox-right {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00IDAgMjQgNDAiIHdpZHRoPSIyNCIgaGVpZ2h0PSI0MCI+PGcgdHJhbnNmb3JtPSJyb3RhdGUoNDUpIj48cGF0aCBkPSJtMC0waDI4djI4aC01di0yM2gtMjN6IiBvcGFjaXR5PSIuNCIvPjxwYXRoIGQ9Im0xIDFoMjZ2MjZoLTN2LTIzaC0yM3oiIGZpbGw9IiNmZmYiLz48L2c+PC9zdmc+");
+            display: none;
+            bottom: 0;
+            right: 0;
+        }
+
+        .w-lightbox-close {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00IDAgMTggMTciIHdpZHRoPSIxOCIgaGVpZ2h0PSIxNyI+PGcgdHJhbnNmb3JtPSJyb3RhdGUoNDUpIj48cGF0aCBkPSJtMCAwaDd2LTdoNXY3aDd2NWgtN3Y3aC01di03aC03eiIgb3BhY2l0eT0iLjQiLz48cGF0aCBkPSJtMSAxaDd2LTdoM3Y3aDd2M2gtN3Y3aC0zdi03aC03eiIgZmlsbD0iI2ZmZiIvPjwvZz48L3N2Zz4=");
+            background-size: 18px;
+            height: 2.6em;
+            right: 0;
+        }       */
+    </style>
+
+
+    <div class="navbar-logo-left-3">
+        <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
+            role="banner" class="navbar-logo-left-container-2 shadow-three w-nav">
+            <div class="container-5">
+                <div class="navbar-wrapper-2">
+                    <a href="/admin" class="navbar-brand-3 w-nav-brand">
+                        <img src="{% static 'images/hv.png' %}" loading="lazy" sizes="251.68055725097656px"
+                            srcset="{% static 'images/hv-p-500.png' %} 500w, {% static 'images/hv-p-800.png' %} 800w, {% static 'images/hv.png' %} 818w"
+                            alt="healvibe logo" class="image-9" />
+                    </a>
+                    <nav role="navigation" class="nav-menu-wrapper-2 w-nav-menu">
+                        <ul role="list" class="nav-menu-two-2 w-list-unstyled">
+                            <li><a href="#Mission" class="nav-link-2">Mission</a></li>
+                            <li><a href="#About_us" class="nav-link-accent-2">About Us</a></li>
+                            <li class="mobile-margin-top-11"><a href="#Footer" class="button-primary-2 w-button">Get
+                                    Started</a></li>
+                        </ul>
+                    </nav>
+                    <div class="menu-button-2 w-nav-button">
+                        <div class="w-icon-nav-menu"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero-section">
+        <div class="hero-wrapper">
+            <div class="div-block">
+                <h1 class="heading">Transform Your Health with Personalized Nutrition</h1>
+                <p class="paragraph-2">Nutrition plans designed to help you achieve your health and wellness goals,
+                    whether you're looking to lose weight, improve your athletic performance, or simply adopt healthier
+                    eating habits.</p>
+                <a href="#Footer" class="button w-button">Book Now</a>
+            </div>
+            <div class="image-wrapper hero-img">
+                <img src="{% static 'images/hero-image.png' %}" loading="lazy"
+                    sizes="(max-width: 479px) 87vw, (max-width: 767px) 65vw, 45vw"
+                    srcset="{% static 'images/hero-image-p-500.png' %} 500w, {% static 'images/hero-image.png' %} 558w"
+                    alt="" class="image-10" />
+            </div>
+        </div>
+    </section>
+
+    <section id="Mission" class="mission-section">
+        <div class="mission-wrapper">
+            <div class="mission-content">
+                <h1 class="heading-2">"Our mission is to enhance individuals' inner and outer beauty,
+                    fostering holistic well-being."</h1>
+                <p class="paragraph">Healvibe is dedicated to empowering individuals and families to attain optimal
+                    health and wellness through personalized nutrition plans and expert guidance. Our holistic approach
+                    centers on addressing the distinct needs of each individual, equipping them with the resources and
+                    counsel necessary to effect positive transformations in their lives.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="benefits-wrapper">
+            <div class="benefits-heading">
+                <h1 class="heading-13">Transform Your Health with <strong>Healvibe</strong></h1>
+            </div>
+            <div class="w-layout-grid mobile-grid">
+                <div id="w-node-f69e0822-d265-c99e-a431-2e8b185bc70d-7fbb1748" class="benefits-mobile-card">
+                    <img src="{% static 'images/nutrition-plan.gif' %}" loading="lazy" alt="" class="image-22" />
+                    <h1 class="heading-18">Long-Term Changes</h1>
+                    <p id="w-node-_528867a8-6ef4-0510-3bed-3868242cd29e-7fbb1748">Experience lasting improvements in
+                        your health and well-being with our holistic solutions.</p>
+                </div>
+                <div id="w-node-_6753d68c-625c-5f7c-64a2-7eb1761e2d53-7fbb1748" class="benefits-mobile-card">
+                    <img src="{% static 'images/heartbeat.gif' %}" loading="lazy" alt="" class="image-22" />
+                    <h1 class="heading-18">Expert Advice For Optimal Health</h1>
+                    <p id="w-node-_6753d68c-625c-5f7c-64a2-7eb1761e2d57-7fbb1748">Access personalized nutrition plans
+                        and guidance from our team of experts.</p>
+                </div>
+                <div id="w-node-bca1bd09-f42e-6447-637c-64e3d26cfec9-7fbb1748" class="benefits-mobile-card">
+                    <img src="{% static 'images/vegan.gif' %}" loading="lazy" alt="" class="image-22" />
+                    <h1 class="heading-18">Solutions For Balanced Living</h1>
+                    <p id="w-node-bca1bd09-f42e-6447-637c-64e3d26cfecd-7fbb1748">A holistic approach to wellness that
+                        addresses your physical, mental, and emotional well-being.</p>
+                </div>
+                <div id="w-node-_34c17f66-106f-0aef-62b8-f1c4e3f0fa4e-7fbb1748" class="benefits-mobile-card">
+                    <img src="{% static 'images/salad.gif' %}" loading="lazy" alt="" class="image-22" />
+                    <h1 class="heading-18">Custom Nutrition For Your Needs</h1>
+                    <p id="w-node-_34c17f66-106f-0aef-62b8-f1c4e3f0fa52-7fbb1748">Our nutrition plans are tailored to
+                        your specific goals and preferences, ensuring that you receive the right nutrients for optimal
+                        health.</p>
+                </div>
+            </div>
+            <div id="w-node-_9315de2b-ac1a-82a3-fc3f-771377e37829-7fbb1748"
+                class="w-layout-layout quick-stack-6 wf-layout-layout">
+                <div id="w-node-_9315de2b-ac1a-82a3-fc3f-771377e3782a-7fbb1748"
+                    class="w-layout-cell benefits-image-wrapper">
+                    <img src="{% static 'images/yoga.png' %}" loading="lazy" width="337" sizes="337px" alt=""
+                        srcset="{% static 'images/yoga-p-500.png' %} 500w, {% static 'images/yoga.png' %} 560w"
+                        class="image-20" />
+                </div>
+                <div id="w-node-f766aed6-ac60-8de6-0f82-3c97a9a79891-7fbb1748" class="w-layout-cell benefits-card">
+                    <img src="{% static 'images/nutrition-plan.gif' %}" loading="lazy" alt="" class="image-21" />
+                    <h2 class="heading-14">Long-Term Changes</h2>
+                    <p class="paragraph-11">Experience lasting improvements in your health and well-being with our
+                        holistic solutions.</p>
+                </div>
+                <div id="w-node-_5f8df84e-fe28-cfaf-a604-d1a0a5d17c32-7fbb1748" class="w-layout-cell benefits-card">
+                    <img src="{% static 'images/heartbeat.gif' %}" loading="lazy" alt="" class="image-21" />
+                    <h3 class="heading-15">Expert Advice For Optimal Health</h3>
+                    <p class="paragraph-14">Access personalized nutrition plans and guidance from our team of experts.
+                    </p>
+                </div>
+                <div id="w-node-_49173e3a-f42e-7775-3964-7292fed1bb00-7fbb1748" class="w-layout-cell benefits-card">
+                    <img src="{% static 'images/vegan.gif' %}" loading="lazy" alt="" class="image-21" />
+                    <h3 class="heading-16">Solutions For Balanced Living</h3>
+                    <p class="paragraph-13">A holistic approach to wellness that addresses your physical, mental, and
+                        emotional well-being.</p>
+                </div>
+                <div id="w-node-df4db07c-e597-53ef-cc54-5711cf38cb62-7fbb1748" class="w-layout-cell benefits-card">
+                    <img src="{% static 'images/salad.gif' %}" loading="lazy" alt="" class="image-21" />
+                    <h3 class="heading-17">Customized Nutrition Plan For Your Needs</h3>
+                    <p class="paragraph-12">Our nutrition plans are tailored to your specific goals and preferences,
+                        ensuring that you receive the right nutrients for optimal health.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="About_us" class="about-section">
+        <div class="about-wrapper">
+            <div class="content-holder">
+                <div class="didi-wrapper"></div>
+                <div class="content">
+                    <h2 class="heading-11">FROM THE DESK</h2>
+                    <h3 class="heading-9"><strong class="bold-text">-Dhwani Khurana</strong></h3>
+                    <div class="text-block">"At the heart of our philosophy lies the belief that food is more than
+                        just sustenance. It's a dialogue with our bodies. Embrace simplicity and nourish yourself
+                        with foods tailored to your body needs. By addressing underlying factors like hormonal balance
+                        and lifestyle choices, we pave the way to optimal health. Don't starve, eat smart."
+                    </div>
+                    <div class="text-block-2"><strong class="bold-text-2">Founder - Nutritionist / Lifestyle
+                            Counsellor / NLP Trainer</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="testimonial-section">
+        <div class="testimonial-wrapper">
+            <h1 class="heading-8"><strong>HAPPY CLIENTS, HAPPY STORIES</strong></h1>
+            <p class="paragraph-4">Explore our collection of glowing testimonials from satisfied clients who have
+                achieved remarkable results on their health journey with us. Dive into inspiring stories of
+                transformation and discover how our personalized approach to nutrition has made a positive impact on
+                their lives.</p>
+            <div data-delay="4000" data-animation="slide" class="slider w-slider" data-autoplay="false"
+                data-easing="ease" data-hide-arrows="false" data-disable-swipe="false" data-autoplay-limit="0"
+                data-nav-spacing="3" data-duration="500" data-infinite="true">
+                <div class="w-slider-mask">
+                    <div class="slide-3 w-slide"></div>
+                    <div class="slide-4 w-slide"></div>
+                    <div class="slide-5 w-slide"></div>
+                    <div class="slide-6 w-slide"></div>
+                    <div class="slide-2 w-slide"></div>
+                </div>
+                <div class="w-slider-arrow-left">
+                    <div class="w-icon-slider-left"></div>
+                </div>
+                <div class="w-slider-arrow-right">
+                    <div class="w-icon-slider-right"></div>
+                </div>
+                <div class="w-slider-nav w-slider-nav-invert w-round"></div>
+            </div>
+        </div>
+    </section>
+
+
+    {% load static %}
+    <footer id="Footer" class="footer-light">
+        <div class="container">
+            <div class="footer-wrapper-two">
+                <div class="div-block-6">
+                    <a href="#" class="footer-brand w-inline-block">
+                        <img src="{% static 'images/hv.png' %}" loading="lazy"
+                            sizes="(max-width: 479px) 88vw, (max-width: 767px) 34vw, 240px"
+                            srcset="{% static 'images/hv-p-500.png' %} 500w, {% static 'images/hv-p-800.png' %} 800w, {% static 'images/hv.png' %} 818w"
+                            alt="healvibe logo" class="image-15" />
+                    </a>
+
+                    <div class="footer-block-two">
+                        <h2 class="footer-title">Services:</h2>
+                        <ul role="list" class="list">
+                            <li>
+                                <div><strong>Weight Loss/Gain</strong></div>
+                            </li>
+                            <li>
+                                <div><strong>Thyroid</strong></div>
+                            </li>
+                            <li>
+                                <div><strong>Hypertension</strong></div>
+                            </li>
+                            <li>
+                                <div><strong>Diabetes</strong></div>
+                            </li>
+                            <li>
+                                <div><strong>PCOS</strong></div>
+                            </li>
+                            <li>
+                                <div><strong>IBS</strong></div>
+                            </li>
+                            <li>
+                                <div><strong>Constipation</strong></div>
+                            </li>
+                            <li>
+                                <div><strong>Cholesterol</strong></div>
+                            </li>
+                            <li>
+                                <div><strong>Other Medical Issues</strong></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <div class="footer-form w-form">
+                    <div class="footer-title">Contact Us!</div>
+                    <div class="footer-social-block-two">
+                        <a href="https://www.google.com/maps/place/HealVibe+clinic/@21.1488044,72.7759791,15z/data=!4m6!3m5!1s0x3be04d00515dc6c9:0x79226c0170e492e1!8m2!3d21.1488044!4d72.7759791!16s%2Fg%2F11y2h5r75m?entry=ttu"
+                            class="footer-social-link w-inline-block" target="_blank">
+                            <img src="{% static 'images/pin.png' %}" loading="lazy" alt="whatsapp" />
+                        </a>
+                        <a href="https://www.instagram.com/heal.vibe?igsh=MWxpM293dXo0ZGoy&amp;utm_source=qr"
+                            class="footer-social-link w-inline-block" target="_blank">
+                            <img src="{% static 'images/4691240_instagram_icon.png' %}" loading="lazy" alt="insta" />
+                        </a>
+                        <a href="https://wa.me/9879040001" class="footer-social-link w-inline-block" target="_blank">
+                            <img src="{% static 'images/843786_whatsapp_icon.png' %}" loading="lazy" alt="whatsapp" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider-two"></div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">© 2024 Healvibe. All rights reserved</div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="{% static 'js/jquery.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/script.js' %}" type="text/javascript"></script>
+</body>
+
+</html>

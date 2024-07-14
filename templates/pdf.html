@@ -1,0 +1,387 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ name }}'s Diet</title>
+    <!-- <link rel="stylesheet" href="{{ css }}"> -->
+
+    <style>
+        @page {
+            size: A4;
+            margin: 20px;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .segment {
+            background-color: #f18742;
+            padding: 1.5rem 3.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .title {
+            margin: 0;
+        }
+
+        .right-section {
+            text-align: right;
+        }
+
+        .container {
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            color: #000;
+            box-sizing: border-box;
+        }
+
+        .layout-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .layout-table td {
+            vertical-align: top;
+            padding: 10px;
+        }
+
+        .small-tables {
+            width: 20%;
+        }
+
+        .big-table {
+            width: 80%;
+        }
+
+        .small-table,
+        .big-table,
+        .layout-table,
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+            border: 2px solid #000;
+
+        }
+
+        .small-table th,
+        .small-table td,
+        .big-table th,
+        .big-table td {
+
+            padding: 8px;
+            text-align: center;
+        }
+
+        .small-table th,
+        .big-table th {
+            background-color: #f2f2f2;
+            background-color: #f18742;
+        }
+
+        .small-table tbody tr:nth-child(even),
+        .big-table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .health-clinic-wrapper {
+            margin-top: 20px;
+            display: flex;
+            background-color: transparent;
+            justify-content: center;
+        }
+
+        .health-clinic {
+            background-color: #FDE2C0;
+            padding: 20px;
+            padding-right: 80px;
+            border: 3px solid #D9A277;
+            margin: 20px 0px;
+
+        }
+
+        .health-clinic h3 {
+            margin: 0 0 10px 0;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: left;
+            color: #333;
+        }
+
+        .health-clinic ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .health-clinic ul li {
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #333;
+            list-style-type: disc;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="pdf-view">
+        <div class="segment">
+            <div class="left-section">
+                <div class="name">Dt. Dhwani Khurana</div>
+                <div class="title">Nutritionist, Healvibe Clinic</div>
+            </div>
+            <div class="right-section">
+                <div>M.o.: +91</div>
+                <div>9879040001</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <table class="layout-table">
+                <tr>
+                    <td class="small-tables">
+                        <table class="small-table">
+                            <thead>
+                                <tr>
+                                    <th>{{ name }}</th>
+                                    <th>{{ phone_number }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Date</td>
+                                    <td>{{ date }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Age</td>
+                                    <td>{{ age }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Weight</td>
+                                    <td>{{ weight }}</td>
+                                </tr>
+
+                                <!-- <tr>
+                                    <td>Gym Time</td>
+                                    <td>{{gym_time}}</td>
+                                </tr> -->
+                                <tr>
+                                    <td>Sleep TIme</td>
+                                    <td>{{sleep_time}}</td>
+                                </tr>
+                                <!-- <tr>
+                                    <td>bf</td>
+                                    <td>time</td>
+                                </tr>
+                                <tr>
+                                    <td>lnch</td>
+                                    <td>time</td>
+                                </tr>
+                                <tr>
+                                    <td>snacks</td>
+                                    <td>time</td>
+                                </tr>
+                                <tr>
+                                    <td>dinner</td>
+                                    <td>time</td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+
+                        <table class="small-table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Body Composition</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Height</td>
+                                    <td>{{ height }} Cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Weight</td>
+                                    <td>{{ weight }} Kg</td>
+                                </tr>
+                                <tr>
+                                    <td>Fat</td>
+                                    <td>{{ body_fat }} %</td>
+                                </tr>
+                                <tr>
+                                    <td>Age</td>
+                                    <td>{{ age }} Yr</td>
+                                </tr>
+                                <tr>
+                                    <td>BMI</td>
+                                    <td>{{ BMI }}</td>
+                                </tr>
+                                <tr>
+                                    <td>RMR</td>
+                                    <td>{{ RMR }}Kcal/day</td>
+                                </tr>
+                                <tr>
+                                    <td>VFat</td>
+                                    <td>{{ visceral_fat }} %</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="small-table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Normal BMI</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>BMI below 18</td>
+                                    <td>Malnutrition 2</td>
+                                </tr>
+                                <tr>
+                                    <td>18.1-20</td>
+                                    <td>Malnutrition 1</td>
+                                </tr>
+                                <tr>
+                                    <td>20.1-23</td>
+                                    <td>Normal</td>
+                                </tr>
+                                <tr>
+                                    <td>23.1-25</td>
+                                    <td>Over weight</td>
+                                </tr>
+                                <tr>
+                                    <td>25.1-28</td>
+                                    <td>Obesity grade 1</td>
+                                </tr>
+                                <tr>
+                                    <td>28.1-30</td>
+                                    <td>Obesity grade 2</td>
+                                </tr>
+                                <tr>
+                                    <td>over 30</td>
+                                    <td>Obesity grade 3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="small-table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2">Normal Body Fat Value %</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">Men</td>
+                                </tr>
+                                <tr>
+                                    <td>14-17</td>
+                                    <td>FIT</td>
+                                </tr>
+                                <tr>
+                                    <td>18-25</td>
+                                    <td>FAT</td>
+                                </tr>
+                                <tr>
+                                    <td>25+</td>
+                                    <td>HIGH RISK</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">Women</td>
+                                </tr>
+                                <tr>
+                                    <td>21-24</td>
+                                    <td>FIT</td>
+                                </tr>
+                                <tr>
+                                    <td>25-31</td>
+                                    <td>FAT</td>
+                                </tr>
+                                <tr>
+                                    <td>32+</td>
+                                    <td>HIGH RISK</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="big-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Time of Consumption</th>
+                                    <th>Food</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for food, time, quantity in meal_data %}
+                                <tr>
+                                    <td>{{ time }}</td>
+                                    <td>{{ food }}</td>
+                                    <td>{{ quantity }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="health-clinic-wrapper">
+        <div class="health-clinic">
+            <h3>A COMPLETE HEALTH CLINIC FOR</h3>
+            <ul>
+                <li>Get at least 6-7 hours of sleep each night.</li>
+                <li>Drink a minimum of 2 liters of water daily.</li>
+                <li>Commit to 45 minutes of regular exercise.</li>
+                <li>Cut down on sugary, processed, junk, bakery, and packet foods.</li>
+                <li>Incorporate 15 minutes of daily meditation.</li>
+                <li>Have dinner before 8 PM.</li>
+                <li>Chew your food thoroughly for better digestion.</li>
+                <li>Opt for 3-5 small meals throughout the day.</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tables = document.querySelectorAll('.container table tbody');
+            tables.forEach(tbody => {
+                const rows = tbody.querySelectorAll('tr');
+                rows.forEach((row, index) => {
+                    row.style.backgroundColor = index % 2 === 0 ? '#f2f2f2' : '#fff';
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>
