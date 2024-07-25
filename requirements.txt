@@ -9,14 +9,17 @@ django-phonenumber-field==8.0.0
 google-auth==2.32.0
 google-auth-oauthlib==1.2.1
 gspread==6.1.2
+gunicorn==22.0.0
 idna==3.7
 oauthlib==3.2.2
+packaging==24.1
 pdfkit==1.0.0
 phonenumbers==8.13.40
 psycopg2==2.9.9
 pyasn1==0.6.0
 pyasn1_modules==0.4.0
 python-decouple==3.8
+python-dotenv==1.0.1
 requests==2.32.3
 requests-oauthlib==2.0.0
 rsa==4.9

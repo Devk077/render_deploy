@@ -14,48 +14,44 @@ from pathlib import Path
 import os
 import json
 import dj_database_url
-from decouple import config
+from dotenv import load_dotenv
 
+# Load .env file
+BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = BASE_DIR / "templates"
 
-
 CREDS_JSON = {
-    "type": config('TYPE'),
-    "project_id": config('PROJECT_ID'),
-    "private_key_id": config('PRIVATE_KEY_ID'),
-    "private_key": config('PRIVATE_KEY').replace('\\n', '\n'),
-    "client_email": config('CLIENT_EMAIL'),
-    "client_id": config('CLIENT_ID'),
-    "auth_uri": config('AUTH_URI'),
-    "token_uri": config('TOKEN_URI'),
-    "auth_provider_x509_cert_url": config('AUTH_PROVIDER_X509_CERT_URL'),
-    "client_x509_cert_url": config('CLIENT_X509_CERT_URL'),
-    "universe_domain": config('UNIVERSE_DOMAIN'),
+    "type": os.getenv('TYPE'),
+    "project_id": os.getenv('PROJECT_ID'),
+    "private_key_id": os.getenv('PRIVATE_KEY_ID'),
+    "private_key": os.getenv('PRIVATE_KEY').replace('\\n', '\n'),
+    "client_email": os.getenv('CLIENT_EMAIL'),
+    "client_id": os.getenv('CLIENT_ID'),
+    "auth_uri": os.getenv('AUTH_URI'),
+    "token_uri": os.getenv('TOKEN_URI'),
+    "auth_provider_x509_cert_url": os.getenv('AUTH_PROVIDER_X509_CERT_URL'),
+    "client_x509_cert_url": os.getenv('CLIENT_X509_CERT_URL'),
+    "universe_domain": os.getenv('UNIVERSE_DOMAIN'),
 }
 
 CREDS_JSON_STR = json.dumps(CREDS_JSON)
 
-
-GOOGLE_SHEET_SHARED_EMAIL = config("GOOGLE_SHEET_SHARED_EMAIL")
-WKHTMLTOPDF_PATH = r"C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe"
-
-
-
+GOOGLE_SHEET_SHARED_EMAIL = os.getenv("GOOGLE_SHEET_SHARED_EMAIL")
+WKHTMLTOPDF_PATH = os.getenv("WKHTMLTOPDF_PATH")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config("SECRET_KEY")
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("DEBUG", "False") == "True"
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 
 # Application definition
 
@@ -101,7 +97,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "healvibe.wsgi.application"
 
-DATABASES = {'default': dj_database_url.config(default= config('DATABASE_URL'), engine='django_cockroachdb')}
+DATABASES = {
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL'), 
+        engine='django_cockroachdb'
+    )
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -118,7 +119,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -132,7 +132,6 @@ USE_TZ = True
 
 # Date format
 DATE_FORMAT = "dd-mm-yyyy"
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/

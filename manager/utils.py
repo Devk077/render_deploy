@@ -2,9 +2,9 @@ import gspread
 from google.oauth2.service_account import Credentials
 from django.conf import settings
 import json
-from decouple import config
+import os
 
-sheet_id = config("SHEET_ID")
+sheet_id = os.environ.get("SHEET_ID")
 scopes = ["https://www.googleapis.com/auth/spreadsheets"]
 
 def get_google_client():
